@@ -1,0 +1,84 @@
+    .cms {
+        padding-top: 25px;
+        font-family: e-Ukraine-thin;
+        display: flow-root;
+        color: #fff;
+    }
+    .cms p {
+        margin-bottom: 12px;
+        font-weight: 100;
+        font-family: e-Ukraine-thin;
+        font-size: 12px;
+        line-height: 180%;
+    }
+    .cms h1 {
+        font-size: 28px;
+        line-height: 1.179;
+        margin-bottom: 21px;
+    }
+    .cms h2 {
+        font-size: 24px;
+        line-height: 1.179;
+        margin-bottom: 21px;
+    }
+    .cms h3 {
+        font-size: 20px;
+        line-height: 1.182;
+        margin-bottom: 16px;
+    }
+    .cms h4 {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .cms ul, .cms ol {
+        padding: 0;
+        margin-left: 15px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 12px;
+        line-height: 180%;
+    }
+    .cms ul li {
+            position: relative;
+            margin-bottom: 10px;
+        }
+    .cms ol li {
+            position: relative;
+            counter-increment: counter;
+            margin-bottom: 10px;
+    }
+
+    .cms table {
+    font-family: e-Ukraine-light;
+    line-height: 1.6;
+    box-shadow: 0 2px 14px rgba(#04001a, .15);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 50px;
+    border-spacing: 0;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border: 1px solid rgba(#000, .2);
+    display: block;
+    width: 100%;
+    }
+    .cms thead, .cms tbody {
+        min-width: 500px;
+        display: table;
+        width: 100%;
+    }
+    .cms thead td, .cms th {
+        font-size: 14px;
+        line-height: 1.556;
+        background-color: black;
+        padding: 12px 10px 12px 24px;
+        color: #fff;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .cms td {
+        font-size: 14px;
+        padding: 11px 10px 11px 24px;
+        border:1px solid #fff;
+    }
+    

@@ -1,0 +1,39 @@
+.section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ttl {
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.button_wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.button_load {
+    width: 291px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #6788FF;
+    backdrop-filter: blur(144px);
+    border-radius: 10px;
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+}

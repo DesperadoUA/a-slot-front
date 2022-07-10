@@ -1,0 +1,139 @@
+.item {
+    margin-top: 24px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.1) 0%, rgba(115, 80, 215, 0.1) 68.23%, rgba(115, 80, 215, 0.1) 100%);
+    border-radius: 16px;
+    border: 1px solid #C0C3FF;
+    padding: 10px;
+    position: relative;
+}
+.card {
+    display: flex;
+}
+.left {
+    width: 150px;
+    min-width: 150px;
+}
+.left img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.action {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.readMore, .goTo {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #6788FF;
+    backdrop-filter: blur(144px);
+    border-radius: 10px;
+    width: 49%;
+    display: inline-block;
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+.goTo {
+    color:#67FFA4;
+    border: 1px solid #67FFA4;
+    cursor:pointer;
+}
+.right {
+    flex-grow: 1;
+    overflow: hidden;
+    padding-left: 15px;
+}
+.itemTtl {
+    display: flex;
+    align-items: center;
+}
+.itemTtl a{
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.license {
+    margin: 0px 6px;
+}
+.licenseWrapper {
+    padding-left: 15px;
+
+}
+.rating {
+    position: relative;
+    width: 124px;
+    height: 24px;
+}
+.emptyRating {
+    width: 100%;
+    height: 100%;
+    background: url('/img/stars_rate_2.png');
+    background-repeat: no-repeat;
+}
+.fullRating {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background: url('/img/stars_rate_1.png');
+    background-repeat: no-repeat;
+}
+.bonuses, .exchange {
+    margin-top: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+.bonusItem, .charactersItem {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 11px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 10px;
+    margin: 5px;
+}
+.bonusItem:first-child, .charactersItem:first-child, .exchangeItem:first-child {
+    margin-left: 0px;
+}
+.exchangeItem {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 11px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 10px;
+    margin: 5px;
+}
+.characters {
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+.toggle {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: url('/img/arrow.png');
+    border: none;
+    cursor: pointer;
+}
+.rotate_180 {
+    transform: rotate(180deg);    
+}

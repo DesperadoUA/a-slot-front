@@ -1,16 +1,46 @@
+@font-face {
+  font-family: e-Ukraine-medium;
+  src: url("../public/fonts/e-Ukraine-Medium.otf") format("opentype");
+  }
+@font-face {
+    font-family: e-Ukraine-light;
+    src: url("../public/fonts/e-Ukraine-Light.otf") format("opentype");
+    }
+@font-face {
+    font-family: e-Ukraine-thin;
+    src: url("../public/fonts/e-Ukraine-Thin.otf") format("opentype");
+  }
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: e-Ukraine-medium;
+  background: #4D4D4D;
+  padding-top: 25px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+ul {
+  margin: 0px;
+  padding: 0px;
+}
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  width: 875px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.rotate_180 {
+  transform: rotate(180deg);
+}
+.fadeIn {
+    display: block!important;
+    opacity: 1!important;
 }

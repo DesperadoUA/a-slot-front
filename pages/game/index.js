@@ -1,11 +1,10 @@
-import { MainLayout } from '../layouts/Main'
-import CasinoLoop from '../components/casino-loop'
-import Content from '../components/content'
-import Faq from '../components/faq'
-import Builder from '../DAL'
-import ErrorPage from './404'
+import { MainLayout } from '../../layouts/Main'
+import GameLoop from '../../components/game-loop'
+import Content from '../../components/content'
+import Builder from '../../DAL'
+import ErrorPage from './../404'
 
-export default function Home({status, data}) {
+export default function IndexGame({status, data}) {
   if(status !== 'ok') return <ErrorPage />
   const meta = {
     title: data.body.meta_title,
@@ -13,16 +12,15 @@ export default function Home({status, data}) {
   }
   return (
     <MainLayout meta={meta}>
-      <CasinoLoop posts={data.body.casino}/>
+      <GameLoop />
       <Content text={data.body.content} />
-      <Faq posts={data.body.faq} />
     </MainLayout>
   )
 }
-Home.getInitialProps = async ({req, res}) => {
+IndexGame.getInitialProps = async ({req, res}) => {
   const DAL = new Builder()
   const response = await DAL.setPostType('pages')
-                            .setUrlId('main')
+                            .setUrlId('game')
                             .setAction('get')
                             .get()
   if(res) res.statusCode = response.status !== 'ok' ? 404 : 200

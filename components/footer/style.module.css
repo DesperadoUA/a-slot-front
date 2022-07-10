@@ -1,0 +1,14 @@
+.footer {
+    background: #000;
+    padding: 17px 0px;
+}
+.text {
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 180%;
+    text-transform: uppercase;
+    color: #DAE3EE;
+    text-align: center;
+}

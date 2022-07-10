@@ -1,0 +1,51 @@
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.card {
+    display: flex;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.1) 0%, rgba(115, 80, 215, 0.1) 68.23%, rgba(115, 80, 215, 0.1) 100%);
+    backdrop-filter: blur(90px);
+    border-radius: 16px;
+}
+.card h1 {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.cardLeft {
+    min-width: 160px;
+}
+.cardLeft img {
+    border-radius: 10px;
+}
+.cardRight {
+    flex-grow: 1;
+}
+.card_row {
+    display: flex;
+}
+.license {
+    margin: 0px 6px;
+    transform: translateY(10px);
+}
+.licenseWrapper {
+    padding-left: 15px;
+}
+.btn {
+    width: 278px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #67FFA4;
+    backdrop-filter: blur(144px);
+    border-radius: 10px;
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #67FFA4;
+    cursor: pointer;
+}

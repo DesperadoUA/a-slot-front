@@ -66,8 +66,39 @@
 }
 .licenseWrapper {
     padding-left: 15px;
-
+    display: flex;
 }
+.licenseItem {
+    position: relative;
+    cursor: pointer;
+}
+.licenseItem:hover .licenseItemHover{
+ display: block;
+}
+.licenseItemHover {
+    position: absolute;
+    bottom: -40px;
+    left:-10px;
+    border-radius: 12px;
+    background: white;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 10px;
+    white-space: nowrap;
+    z-index: 5;
+    display: none;
+}
+.licenseItemHover::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    top: -5px;
+    left: 25px;
+    transform: rotate(45deg);
+    border-radius: 5px;
+} 
 .rating {
     position: relative;
     width: 124px;
@@ -105,6 +136,12 @@
     padding: 10px;
     margin: 5px;
 }
+.bonusItem {
+    position: relative;
+}
+.bonusItemTtl {
+    cursor: pointer;
+}
 .bonusItem:first-child, .charactersItem:first-child, .exchangeItem:first-child {
     margin-left: 0px;
 }
@@ -137,3 +174,144 @@
 .rotate_180 {
     transform: rotate(180deg);    
 }
+.popUp {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 100;
+    top:0px;
+    left:0px;
+    position: fixed;
+}
+.licenseCard {
+    width: 344px;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 175px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.2) 0%, rgba(115, 80, 215, 0.2) 68.23%, rgba(115, 80, 215, 0.2) 100%);
+    box-shadow: 0px 8px 8px rgba(15, 22, 43, 0.2); 
+    backdrop-filter: blur(90px);
+    border-radius: 16px;
+    padding: 15px 10px;
+}
+.bonusCard {
+    width: 352px;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 175px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.2) 0%, rgba(115, 80, 215, 0.2) 68.23%, rgba(115, 80, 215, 0.2) 100%);
+    box-shadow: 0px 8px 8px rgba(15, 22, 43, 0.2); 
+    backdrop-filter: blur(90px);
+    border-radius: 16px;
+    padding: 15px 10px;
+}
+.licenseRow {
+    display: flex;
+}
+.licenseCardLeft {
+    min-width: 50px;
+}
+.licenseCardTtl{
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 17px;
+   color: #FFFFFF;
+   margin-bottom: 10px;
+}
+.licenseCardText {
+    font-family: e-Ukraine-light;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #DAE3EE;
+}
+.licenseCardRight {
+    padding-left: 10px;
+    padding-right: 25px;
+}
+.popUpBtn {
+    width: 100%;
+    padding: 10px;
+    background: rgba(210, 228, 255, 0.12);
+    border: 1px solid #67FFA4;
+    backdrop-filter: blur(144px);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: e-Ukraine-medium;
+    color: #67FFA4;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.close {
+    width: 30px;
+    height: 30px;
+    background: url('/img/close.svg');
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+.bonusCardImg {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+.bonusCardTtl {
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: e-Ukraine-thin;
+}
+.bonusCardValue {
+    font-size: 14px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.bonusCardRules {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bonusCardText{
+    font-size: 10px;
+    line-height: 17px;
+    font-family: e-Ukraine-thin;
+}
+.exchangeItemTtl {
+    cursor: pointer;
+}
+.exchangeCard {
+    width: 575px;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 175px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.2) 0%, rgba(115, 80, 215, 0.2) 68.23%, rgba(115, 80, 215, 0.2) 100%);
+    box-shadow: 0px 8px 8px rgba(15, 22, 43, 0.2); 
+    backdrop-filter: blur(90px);
+    border-radius: 16px;
+    padding: 15px 10px;
+}
+.exchangeCardTtl {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.exchangeCardImg {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.exchangeCardImg img {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 8px;
+}
+.exchangeCardText {
+    font-size: 10px;
+    line-height: 17px;
+    font-family: e-Ukraine-thin;
+    padding-top: 10px;
+    }

@@ -6,7 +6,6 @@
     display: flex;
     padding: 10px;
     background: linear-gradient(180deg, rgba(175, 193, 255, 0.1) 0%, rgba(115, 80, 215, 0.1) 68.23%, rgba(115, 80, 215, 0.1) 100%);
-    backdrop-filter: blur(90px);
     border-radius: 16px;
 }
 .card h1 {
@@ -32,6 +31,7 @@
 }
 .licenseWrapper {
     padding-left: 15px;
+    display: flex;
 }
 .btn {
     width: 278px;
@@ -48,4 +48,15 @@
     text-transform: uppercase;
     color: #67FFA4;
     cursor: pointer;
+}
+.popUp {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    z-index: 5;
 }

@@ -44,3 +44,40 @@ ul {
     display: block!important;
     opacity: 1!important;
 }
+.telegaBtn {
+  background: #26A5E4;
+  display: inline-block;
+  padding: 13px 20px 13px 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+.telegaBtn::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: url(/img/telega.svg);
+  position: absolute;
+  top:13px;
+  left:17px;
+}
+.phoneLink, .mailLink {
+  display: inline-block;
+  padding: 2px 20px 2px 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.phoneLink::before, .mailLink::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: url(/img/phone.svg);
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
+.mailLink::before {
+  background: url(/img/mail.svg);
+}

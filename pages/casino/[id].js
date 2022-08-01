@@ -4,19 +4,19 @@ import CasinoTop from '../../components/casino-top'
 import Faq from '../../components/faq'
 import CasinoCharacters from '../../components/casino-characters'
 import Builder from '../../DAL'
-import ErrorPage from './../404'
 export default function SingleCasino({status, data}) {
-  if(status !== 'ok') return <ErrorPage />
-  const meta = {
-    title: data.body.meta_title,
-    description: data.body.description
-  }
     return (
-        <MainLayout meta={meta}>
-          <CasinoTop data={data.body} />
-          <CasinoCharacters data={data.body} />
-          <Content text={data.body.content} />
-          <Faq posts={data.body.faq} />
+        <MainLayout meta={data.body} status={status}>
+          {
+            status === 'ok' ? 
+            <>
+            <CasinoTop data={data.body} />
+            <CasinoCharacters data={data.body} />
+            <Content text={data.body.content} />
+            <Faq posts={data.body.faq} />
+            </>
+          :null
+          }
         </MainLayout>
     )
 }

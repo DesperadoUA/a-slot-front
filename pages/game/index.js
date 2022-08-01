@@ -1,19 +1,21 @@
 import { MainLayout } from '../../layouts/Main'
 import GameLoop from '../../components/game-loop'
 import Content from '../../components/content'
+import Faq from '../../components/faq'
 import Builder from '../../DAL'
-import ErrorPage from './../404'
 
 export default function IndexGame({status, data}) {
-  if(status !== 'ok') return <ErrorPage />
-  const meta = {
-    title: data.body.meta_title,
-    description: data.body.description
-  }
   return (
-    <MainLayout meta={meta}>
-      <GameLoop />
-      <Content text={data.body.content} />
+    <MainLayout meta={data.body} status={status}>
+      {
+            status === 'ok' ? 
+            <>
+            <GameLoop />
+            <Content text={data.body.content} />
+            <Faq posts={data.body.faq} />
+            </>
+            : null
+       }
     </MainLayout>
   )
 }

@@ -1,7 +1,12 @@
 import casinoCard from './style.module.css'
+import LicenseItem from './licenseItem'
+import BonusItem from './bonusItem'
+import ExchangeItem from './exchangeItem'
 import { useState } from 'react'
 import Link from 'next/link'
 import Helper from '../../../helpers'
+import config from '../../../config'
+import TRANSLATE from '../../../helpers/translate'
 export default function CasinoCard({item}) {
     const [openState, setOpenState] = useState(false)
     const changeState = () => setOpenState(!openState)
@@ -11,7 +16,7 @@ export default function CasinoCard({item}) {
         <article className={casinoCard.item}>
             <div className={casinoCard.card}>
                 <div className={casinoCard.left}>
-                    <img src={item.thumbnail} alt={item.title} />
+                    <img src={item.thumbnail} alt={item.title} width={150} height={96} />
                 </div>
                 <div className={casinoCard.right}>
                     <div className={casinoCard.itemTtl}>
@@ -20,7 +25,7 @@ export default function CasinoCard({item}) {
                                     </Link>
                                     <div className={casinoCard.licenseWrapper}>
                                         {
-                                            item.licenses.map((item, index) => <img src={`/img/${item}.png`} className={casinoCard.license}  key={index} />)
+                                            item.licenses.map((itemLicense, index) => <LicenseItem item={itemLicense} key={index}  casinoItem={item}/>)
                                         }
                                     </div>
                     </div>
@@ -32,14 +37,14 @@ export default function CasinoCard({item}) {
                     </div>
                     <div className={casinoCard.bonuses}>
                                     {
-                                        item.events.map((item, index) => <div className={casinoCard.bonusItem} key={index}>{item.value_1}</div>)
+                                        item.events.map((itemBonus, index) => <BonusItem item={itemBonus} key={index}  casinoItem={item}/>)
                                     }
                     </div>
                     {
                         openState ?
                                     <div className={casinoCard.exchange}>
                                         {
-                                            item.exchange.map((item, index) => <div className={casinoCard.exchangeItem} key={index}>{item.value_1}</div>)
+                                            item.exchange.map((itemExchange, index) => <ExchangeItem item={itemExchange} key={index}/>)
                                         }
                                     </div> 
                                 : null
@@ -56,9 +61,9 @@ export default function CasinoCard({item}) {
             </div>
             <div className={casinoCard.action}>
                 <Link href={item.permalink}>
-                    <a className={casinoCard.readMore}>Подробнее</a>
+                    <a className={casinoCard.readMore}>{TRANSLATE.MORE[config.LANG]}</a>
                 </Link>
-                <button className={casinoCard.goTo} onClick={()=>refAction(item)}>Перейти</button>
+                <button className={casinoCard.goTo} onClick={()=>refAction(item)}>{TRANSLATE.GO_TO[config.LANG]}</button>
             </div>
             <button className={classToggle} onClick={()=>changeState()}></button>
         </article>

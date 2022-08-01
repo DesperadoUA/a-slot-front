@@ -1,20 +1,21 @@
 import { MainLayout } from '../../layouts/Main'
 import Content from '../../components/content'
+import CasinoLoop from '../../components/casino-loop'
+import Faq from '../../components/faq'
 import Builder from '../../DAL'
-import ErrorPage from './../404'
 
 export default function IndexCasino({status, data}) {
-  if(status !== 'ok') return <ErrorPage />
-  const meta = {
-    title: data.body.meta_title,
-    description: data.body.description
-  }
   return (
-    <MainLayout meta={meta}>
-      <div style={{height: "100px"}}>
-        <h1>{data.body.h1}</h1>
-      </div>
-      <Content text={data.body.content} />
+    <MainLayout meta={data.body} status={status}>
+       {
+            status === 'ok' ? 
+            <>
+            <CasinoLoop posts={data.body.casino}/>
+            <Content text={data.body.content} />
+            <Faq posts={data.body.faq} />
+            </>
+            : null
+       }
     </MainLayout>
   )
 }

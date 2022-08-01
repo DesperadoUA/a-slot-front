@@ -48,7 +48,7 @@ export default class Axios {
         this.#API_URL = this.#BASE_API_URL + '/' + PARTS_URL.join('/')
     } 
     setResponse(response){
-        this.#response.status = response.status === this.#STATUS_CODE[this.#method] ? 'ok' : 'error'
-        if(response.status === this.#STATUS_CODE[this.#method]) this.#response.data = response.data
+        this.#response.status = response.data.confirm === 'ok' ? 'ok' : 'error'
+        if(response.data.confirm === 'ok') this.#response.data = response.data
     }
 }

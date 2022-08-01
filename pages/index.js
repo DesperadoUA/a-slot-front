@@ -3,19 +3,19 @@ import CasinoLoop from '../components/casino-loop'
 import Content from '../components/content'
 import Faq from '../components/faq'
 import Builder from '../DAL'
-import ErrorPage from './404'
 
 export default function Home({status, data}) {
-  if(status !== 'ok') return <ErrorPage />
-  const meta = {
-    title: data.body.meta_title,
-    description: data.body.description
-  }
   return (
-    <MainLayout meta={meta}>
-      <CasinoLoop posts={data.body.casino}/>
-      <Content text={data.body.content} />
-      <Faq posts={data.body.faq} />
+    <MainLayout meta={data.body} status={status}>
+       {
+            status === 'ok' ? 
+            <>
+            <CasinoLoop posts={data.body.casino}/>
+            <Content text={data.body.content} />
+            <Faq posts={data.body.faq} />
+            </>
+            : null
+       }
     </MainLayout>
   )
 }

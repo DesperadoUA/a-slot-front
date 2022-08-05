@@ -211,14 +211,31 @@
 .licenseCardLeft {
     min-width: 50px;
 }
-.licenseCardTtl{
+.licenseCardTtl {
     font-family: e-Ukraine-medium;
-    font-style: normal;
+   font-style: normal;
    font-weight: 700;
    font-size: 14px;
    line-height: 17px;
    color: #FFFFFF;
    margin-bottom: 10px;
+}
+.vendorVrapper {
+    font-size: 10px;
+    line-height: 12px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    margin-left: 0px;
+}
+.vendorTxt {
+    cursor: pointer;
 }
 .licenseCardText {
     font-family: e-Ukraine-light;
@@ -315,3 +332,38 @@
     font-family: e-Ukraine-thin;
     padding-top: 10px;
     }
+.popUpTtl {
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+.imgWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.vendorItem {
+    margin: 10px 2px;
+    max-width: 67px;
+}
+.vendorItem:first-child {
+    margin-left: 0px;
+}
+.vendorItem img {
+    border-radius: 6px;
+}
+.vendorText {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: e-Ukraine-thin;
+    padding-top: 5px;
+    display: inline-block;
+    padding-bottom: 2px;
+    text-align: center;
+    width: 100%;
+}

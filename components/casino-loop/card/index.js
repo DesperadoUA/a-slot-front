@@ -2,6 +2,8 @@ import casinoCard from './style.module.css'
 import LicenseItem from './licenseItem'
 import BonusItem from './bonusItem'
 import ExchangeItem from './exchangeItem'
+import VendorsItem from './vendorsItem'
+import LangItem from './langItem'
 import { useState } from 'react'
 import Link from 'next/link'
 import Helper from '../../../helpers'
@@ -41,10 +43,27 @@ export default function CasinoCard({item}) {
                                     }
                     </div>
                     {
-                        openState ?
+                        openState && item.active_languages.length ?
+                                    <div className={casinoCard.exchange}>
+                                        {
+                                            item.active_languages.map((itemActiveLanguages, index) => <LangItem item={itemActiveLanguages} key={index}/>)
+                                        }
+                                    </div> 
+                                : null
+                    }
+                    {
+                        openState && item.exchange.length ?
                                     <div className={casinoCard.exchange}>
                                         {
                                             item.exchange.map((itemExchange, index) => <ExchangeItem item={itemExchange} key={index}/>)
+                                        }
+                                    </div> 
+                                : null
+                    }
+                    {
+                        openState && item.vendors.length ?
+                                    <div className={casinoCard.exchange}> {
+                                            <VendorsItem item={item.vendors} />
                                         }
                                     </div> 
                                 : null

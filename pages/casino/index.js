@@ -25,6 +25,7 @@ IndexCasino.getInitialProps = async ({req, res}) => {
                             .setUrlId('casino')
                             .setAction('get')
                             .get()
+  response.status = 'error'
   if(res) res.statusCode = response.status !== 'ok' ? 404 : 200
   return response
 }

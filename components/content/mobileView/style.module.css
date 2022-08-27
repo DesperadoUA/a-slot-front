@@ -1,7 +1,6 @@
 .section {
     padding-top: 30px;
     padding-bottom: 30px;
-    background: linear-gradient(0deg, #1F222C, #1F222C), #212532;
 }
 .faq_row {
     background: rgba(175, 193, 255, 0.1);
@@ -17,7 +16,7 @@
     margin-top: 2px;
     font-style: normal;
     font-weight: bold;
-    line-height: 36px;
+    line-height: 40px;
     position: relative;
     cursor: pointer;
     font-size: 16px;
@@ -26,6 +25,9 @@
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+}
+.faq_question h1, .faq_question h2, .faq_question h3, .faq_question h4, .faq_question h5, .faq_question h6 {
+    line-height: 36px;
 }
 .faq_answer {
     font-family: e-Ukraine-light;
@@ -37,13 +39,14 @@
     border-radius: 8px;
     color: #FFFFFF;
 }
-
-.faq_answer_item {
-    transition: 0.7s;
-    opacity: 0;
+.faq_answer span {
     padding: 15px 20px;
     box-sizing: border-box;
     display: block;
+}
+.faq_answer_item {
+    transition: 0.7s;
+    opacity: 0;
 }
 .faq_close {
     width: 16px;
@@ -54,12 +57,4 @@
     background: url(/img/white_rrow.svg);
     border: none;
     cursor: pointer;
-}
-.faq_answer_item ul, .faq_answer_item ol {
-    padding: 0;
-    margin-left: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-size: 12px;
-    line-height: 180%;
 }

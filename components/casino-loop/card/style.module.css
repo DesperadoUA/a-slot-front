@@ -86,6 +86,7 @@
     font-size: 10px;
     white-space: nowrap;
     z-index: 5;
+    transform: translateZ(10px);
     display: none;
 }
 .licenseItemHover::before {
@@ -179,6 +180,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.55);
     z-index: 100;
+    transform: translateZ(100px);
     top:0px;
     left:0px;
     position: fixed;
@@ -193,6 +195,7 @@
     backdrop-filter: blur(90px);
     border-radius: 16px;
     padding: 15px 10px;
+    position: relative;
 }
 .bonusCard {
     width: 352px;
@@ -204,6 +207,7 @@
     backdrop-filter: blur(90px);
     border-radius: 16px;
     padding: 15px 10px;
+    position: relative;
 }
 .licenseRow {
     display: flex;
@@ -265,12 +269,13 @@
 .close {
     width: 30px;
     height: 30px;
-    background: url('/img/close.svg');
+    background: url('/img/close.png');
     background-size: cover;
     position: absolute;
     right: 10px;
     top: 10px;
     z-index: 2;
+    transform: translateZ(2px);
     cursor: pointer;
 }
 .bonusCardImg {
@@ -294,10 +299,26 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.bonusCardText{
+.bonusCardText {
     font-size: 10px;
     line-height: 17px;
     font-family: e-Ukraine-thin;
+    height: 70px;
+    overflow-y: scroll;
+}
+.bonusCardText::-webkit-scrollbar {
+    width:2px;
+}
+.bonusCardText::-webkit-scrollbar-thumb {
+    border-width:1px 1px 1px 2px;
+    border-color:#777;
+    background-color:#9fa7b4
+}
+.bonusCardText::-webkit-scrollbar-thumb:hover{
+    background-color:#9fa7b4
+}
+.bonusCardText::-webkit-scrollbar-track-piece {
+    background-color:#2a3950;
 }
 .exchangeItemTtl {
     cursor: pointer;
@@ -312,6 +333,7 @@
     backdrop-filter: blur(90px);
     border-radius: 16px;
     padding: 15px 10px;
+    position: relative;
 }
 .exchangeCardTtl {
     padding: 10px 0px;
@@ -366,4 +388,61 @@
     padding-bottom: 2px;
     text-align: center;
     width: 100%;
+}
+/* Rating */
+.ratingWrapper {
+    display: flex;
+    padding-top: 5px;
+}
+.ratingItem {
+    width: 36px;
+    height: 36px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: e-Ukraine-medium;
+    position: relative;
+}
+.circleRating {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;    
+}
+.circleRatingCircleBg {
+    fill: none;
+    opacity: .23;
+    stroke: #A3A3AC;
+    stroke-width: 2;
+}
+.ratingLabel {
+    position: absolute;
+    bottom: -40px;
+    left: -10px;
+    border-radius: 12px;
+    background: white;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 10px;
+    white-space: nowrap;
+    z-index: 5;
+    transform: translateZ(5px);
+    display: none;
+}
+.ratingItem:hover .ratingLabel {
+    display: block;
+}
+.ratingLabel::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    top: -5px;
+    left: 15px;
+    transform: rotate(45deg);
+    border-radius: 5px;
 }

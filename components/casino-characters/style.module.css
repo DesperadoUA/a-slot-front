@@ -1,7 +1,7 @@
 .section {
     padding-top: 30px;
     padding-bottom: 40px;
-    background: rgba(20, 21, 23, 0.4);
+    background: linear-gradient(0deg, #1F222C, #1F222C), #212532;
 }
 .section h2 {
     color: white;

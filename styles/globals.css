@@ -44,7 +44,7 @@ ul {
     display: block!important;
     opacity: 1!important;
 }
-.telegaBtn {
+.telegaBtn, .casinoBtn, .userBtn {
   background: #26A5E4;
   display: inline-block;
   padding: 13px 20px 13px 50px;
@@ -52,8 +52,13 @@ ul {
   border-radius: 10px;
   text-transform: uppercase;
   position: relative;
+  margin-right: 15px;
 }
-.telegaBtn::before {
+.casinoBtn, .userBtn {
+  background: rgba(210, 228, 255, 0.12);
+  border: 1px solid #6788FF;
+}
+.telegaBtn::before, .casinoBtn::before, .userBtn::before {
   content: '';
   width: 22px;
   height: 22px;
@@ -62,6 +67,12 @@ ul {
   top:13px;
   left:17px;
 }
+.casinoBtn::before {
+  background: url(/img/casino.png);
+}
+.userBtn::before {
+  background: url(/img/user.png);
+}
 .phoneLink, .mailLink {
   display: inline-block;
   padding: 2px 20px 2px 25px;
@@ -69,7 +80,7 @@ ul {
   border-radius: 10px;
   position: relative;
 }
-.phoneLink::before, .mailLink::before {
+.phoneLink::before, .mailLink::before{
   content: '';
   width: 18px;
   height: 18px;
@@ -81,3 +92,124 @@ ul {
 .mailLink::before {
   background: url(/img/mail.svg);
 }
+/* Content */
+article .attention {
+  border: 1px solid #FF6782;
+  background: #1F222C;
+}
+article .attention h1,  article .attention h2, article .attention h3, article .attention h4, article .attention h5, article .attention h6 {
+  color: #FF6782;
+}
+article .warning {
+  background: #1F222C;  
+  border: 1px solid #6788FF;
+}
+@media (min-width: 1200px) {
+  article .attention, article .warning {
+    padding: 30px 24px;
+    margin-bottom: 32px;
+    border-radius: 14px;
+  }
+  article .default {
+    margin-bottom: 32px;  
+  }
+}
+/* Content */
+
+/* Rating */
+.circleRatingPercentage {
+  position: absolute;
+  z-index: 2; 
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+}
+.circleRatingCircle {
+  fill: none;
+  stroke: #0f6;
+  stroke-width: 2;
+  stroke-linecap: round;
+  -webkit-animation: progress 1s ease-out forwards;
+  animation: progress 1s ease-out forwards;
+}
+.rating_a_plus .circleRatingPercentage {
+  color: #FFED00;
+}
+.rating_a_plus .circleRatingCircle  {
+  stroke: #FFED00;
+  box-shadow: 0px 0px 14px rgba(255, 237, 0, 0.95);
+}
+.rating_a .circleRatingPercentage {
+  color: #FFED00;
+}
+.rating_a .circleRatingCircle  {
+  stroke: #FFED00;
+  box-shadow: 0px 0px 14px rgba(255, 237, 0, 0.95);
+}
+.rating_a_minus .circleRatingPercentage {
+  color: #FFED00;
+}
+.rating_a_minus .circleRatingCircle  {
+  stroke: #FFED00;
+  box-shadow: 0px 0px 14px rgba(255, 237, 0, 0.95);
+}
+
+.rating_b_plus .circleRatingPercentage {
+  color: #FFA860;
+}
+.rating_b_plus .circleRatingCircle  {
+  stroke: #FFA860;
+}
+.rating_b .circleRatingPercentage {
+  color: #FFA860;
+}
+.rating_b .circleRatingCircle  {
+  stroke: #FFA860;
+}
+.rating_b_minus .circleRatingPercentage {
+  color: #FFA860;
+}
+.rating_b_minus .circleRatingCircle  {
+  stroke: #FFA860;
+}
+
+.rating_c_plus .circleRatingPercentage {
+  color: #D8A29E;
+}
+.rating_c_plus .circleRatingCircle  {
+  stroke: #D8A29E;
+}
+.rating_c .circleRatingPercentage {
+  color: #D8A29E;
+}
+.rating_c .circleRatingCircle  {
+  stroke: #D8A29E;
+}
+.rating_c_minus .circleRatingPercentage {
+  color: #D8A29E;
+}
+.rating_c_minus .circleRatingCircle  {
+  stroke: #D8A29E;
+}
+
+.rating_d_plus .circleRatingPercentage {
+  color: #A3A3AC;
+}
+.rating_d_plus .circleRatingCircle  {
+  stroke: #A3A3AC;
+}
+.rating_d .circleRatingPercentage {
+  color: #A3A3AC;
+}
+.rating_d .circleRatingCircle  {
+  stroke: #A3A3AC;
+}
+.rating_d_minus .circleRatingPercentage {
+  color: #A3A3AC;
+}
+.rating_d_minus .circleRatingCircle  {
+  stroke: #A3A3AC;
+}
+/* Rating */

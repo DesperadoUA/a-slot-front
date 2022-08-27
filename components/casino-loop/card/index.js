@@ -4,6 +4,7 @@ import BonusItem from './bonusItem'
 import ExchangeItem from './exchangeItem'
 import VendorsItem from './vendorsItem'
 import LangItem from './langItem'
+import RatingItem from './ratingItem'
 import { useState } from 'react'
 import Link from 'next/link'
 import Helper from '../../../helpers'
@@ -32,10 +33,10 @@ export default function CasinoCard({item}) {
                                     </div>
                     </div>
                     <div className={casinoCard.ratingWrapper}>
-                                    <div className={casinoCard.rating}>
-                                        <div className={casinoCard.emptyRating}></div>
-                                        <div className={casinoCard.fullRating} style={{'width': item.rating+'%'}}></div>
-                                    </div>
+                        <RatingItem rating={item.convenience} label={TRANSLATE['CONVENIENCE'][config.LANG]} />
+                        <RatingItem rating={item.replenishment} label={TRANSLATE['DEPOSIT/WITHDRAWAL'][config.LANG]} />
+                        <RatingItem rating={item.support} label={TRANSLATE['SUPPORT'][config.LANG]} />
+                        <RatingItem rating={item.actions} label={TRANSLATE['GAMES'][config.LANG]} />
                     </div>
                     <div className={casinoCard.bonuses}>
                                     {
@@ -66,14 +67,6 @@ export default function CasinoCard({item}) {
                                             <VendorsItem item={item.vendors} />
                                         }
                                     </div> 
-                                : null
-                    }
-                    {
-                        openState ? 
-                                    <div className={casinoCard.characters}>
-                                        <div className={casinoCard.charactersItem}>{item.min_deposit}</div>
-                                        <div className={casinoCard.charactersItem}>{item.min_payout}</div>
-                                    </div>
                                 : null
                     }
                 </div>

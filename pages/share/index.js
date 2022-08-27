@@ -1,16 +1,14 @@
 import { MainLayout } from '../../layouts/Main'
-import H1 from '../../components/h1'
 import Content from '../../components/content'
 import Faq from '../../components/faq'
 import Builder from '../../DAL'
 
-export default function IndexBonus({status, data}) {
+export default function IndexShare({status, data}) {
   return (
     <MainLayout meta={data.body} status={status}>
       {
             status === 'ok' ? 
             <>
-            <H1 h1={data.body.h1} />
             <Content text={data.body.content} />
             <Faq posts={data.body.faq} />
             </>
@@ -19,10 +17,10 @@ export default function IndexBonus({status, data}) {
     </MainLayout>
   )
 }
-IndexBonus.getInitialProps = async ({req, res}) => {
+IndexShare.getInitialProps = async ({req, res}) => {
   const DAL = new Builder()
   const response = await DAL.setPostType('pages')
-                            .setUrlId('bonus')
+                            .setUrlId('share')
                             .setAction('get')
                             .get()
   if(res) res.statusCode = response.status !== 'ok' ? 404 : 200

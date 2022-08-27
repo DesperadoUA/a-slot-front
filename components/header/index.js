@@ -2,31 +2,41 @@ import React, { useEffect } from 'react'
 import { useRouter } from "next/router";
 import header from './style.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import { setSettings } from './../../redux/actions/settings'
+import { setDevice } from './../../redux/actions/common'
 import { useDispatch, useSelector } from 'react-redux'
+import Search from './search'
 
 export default function Header() {
     const pathParams = useRouter()
     const dispatch = useDispatch()
     const state = useSelector(state => {
         const { settingsReducer } = state
-        switch(pathParams.route) {
-            case '/casino': {
-                const posts = settingsReducer.settings.filter(item => item.key === 'casino_menu')
-                return posts.length ? posts[0].value : []
-            } 
-            case '/bonus': {
-                const posts = settingsReducer.settings.filter(item => item.key === 'bonus_menu')
-                return posts.length ? posts[0].value : []
-            }
-            default: {
-                const posts = settingsReducer.settings.filter(item => item.key === 'default_menu')
-                return posts.length ? posts[0].value : []
-            }
+        if(pathParams.route === '/game') {
+            const posts = settingsReducer.settings.filter(item => item.key === 'game_menu')
+            return posts.length ? posts[0].value : []
+        }
+        else if(pathParams.route.startsWith('/vendor')) {
+            const posts = settingsReducer.settings.filter(item => item.key === 'game_menu')
+            return posts.length ? posts[0].value : []
+        }
+        else if(pathParams.route === '/bonus') {
+            const posts = settingsReducer.settings.filter(item => item.key === 'bonus_menu')
+            return posts.length ? posts[0].value : []
+        }
+        else {
+            const posts = settingsReducer.settings.filter(item => item.key === 'default_menu')
+            return posts.length ? posts[0].value : []
         }
      })
+    const commonState = useSelector(state => {
+        const { commonReducer } = state
+        return commonReducer
+    })
     useEffect(()=>{
         if(!state.length) dispatch(setSettings())
+        if(!commonState.device) dispatch(setDevice())
     }, [])
     return (
         <header className={header.header}>
@@ -43,12 +53,12 @@ export default function Header() {
                             }
                         </ul>
                         <div className={header.search}>
-                            <img src='/img/search.svg' alt="search"/>
+                            <Search />
                         </div>
                     </nav>
                 </div>
                 <div className={header.user}>
-                    <img src='/img/man.svg' alt="man"/>
+                    <Image src='/img/man.svg' alt="man" width="30" height="30"/>
                 </div>
             </div>
         </header>

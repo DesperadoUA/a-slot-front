@@ -25,7 +25,7 @@ export default class Axios {
         this.setEndpoint(options)
         this.setData(options)
         if(this.#method === 'get' || this.#method === 'delete') {
-            const response = await axios[this.#method](this.#API_URL)
+            const response = await axios[this.#method](this.#API_URL, {params: this.#data})
             this.setResponse(response)
         } else {
             const response = await axios[this.#method](this.#API_URL, this.#data)

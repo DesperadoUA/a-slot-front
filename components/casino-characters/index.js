@@ -67,6 +67,18 @@ export default function CasinoCharacters({data}) {
                     </div>
                     : null
                 }
+                {
+                    data.active_languages.length ?
+                    <div className={css.row}>
+                        <div className={css.left}>{TRANSLATE.LANG[config.LANG]}</div>
+                        <div className={css.right}>
+                            {
+                                data.active_languages.map((item, index) => <span className={css.charactersItem} key={index}>{item}</span>)
+                            }
+                        </div>
+                    </div>
+                    :null
+                }
             </div>
         </section>
     )

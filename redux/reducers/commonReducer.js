@@ -1,16 +1,16 @@
 import * as t from '../types'
 const defaultState = {
-    settings: []
+    device: ''
 }
-const settingsReducer = (state = defaultState, action) => {
+const commonReducer = (state = defaultState, action) => {
         switch(action.type) {
-            case t.SET_SETTINGS: {
+            case t.SET_DEVICE: {
                 return {
                     ...state,
-                    settings: action.data
+                    device: action.data
                 }
             }
             default: return state
         }
     }
-export default settingsReducer
+export default commonReducer

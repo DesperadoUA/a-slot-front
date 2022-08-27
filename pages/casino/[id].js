@@ -2,6 +2,7 @@ import { MainLayout } from '../../layouts/Main'
 import Content from '../../components/content'
 import CasinoTop from '../../components/casino-top'
 import Faq from '../../components/faq'
+import H1 from '../../components/h1'
 import CasinoCharacters from '../../components/casino-characters'
 import Builder from '../../DAL'
 export default function SingleCasino({status, data}) {
@@ -10,6 +11,7 @@ export default function SingleCasino({status, data}) {
           {
             status === 'ok' ? 
             <>
+            <H1 h1={data.body.h1} />
             <CasinoTop data={data.body} />
             <CasinoCharacters data={data.body} />
             <Content text={data.body.content} />

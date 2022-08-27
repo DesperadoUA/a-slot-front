@@ -1,3 +1,6 @@
+    .section {
+        background: linear-gradient(180deg, #2D304D 0%, #272B39 20.55%, #272B39 78.56%, #2D304D 100%);
+    }
     .cms {
         padding-top: 25px;
         font-family: e-Ukraine-thin;

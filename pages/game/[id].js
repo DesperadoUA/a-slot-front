@@ -1,12 +1,16 @@
 import { MainLayout } from '../../layouts/Main'
 import Content from '../../components/content'
+import H1 from '../../components/h1'
 import Builder from '../../DAL'
 export default function SingleGame({status, data}) {
   return (
     <MainLayout meta={data.body} status={status}>
        {
         status === 'ok' ? 
-        <Content text={data.body.content} />
+        <>
+          <H1 h1={data.body.h1} />
+          <Content text={data.body.content} />
+        </>
       :null
       }
     </MainLayout>

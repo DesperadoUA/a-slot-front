@@ -2,6 +2,7 @@ import { MainLayout } from '../../layouts/Main'
 import H1 from '../../components/h1'
 import Content from '../../components/content'
 import Faq from '../../components/faq'
+import BonusLoop from '../../components/bonus-loop'
 import Builder from '../../DAL'
 
 export default function IndexBonus({status, data}) {
@@ -11,6 +12,7 @@ export default function IndexBonus({status, data}) {
             status === 'ok' ? 
             <>
             <H1 h1={data.body.h1} />
+            <BonusLoop posts={data.body.bonus} />
             <Content text={data.body.content} />
             <Faq posts={data.body.faq} />
             </>

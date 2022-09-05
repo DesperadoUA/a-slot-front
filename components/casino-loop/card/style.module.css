@@ -6,6 +6,9 @@
     padding: 10px;
     position: relative;
 }
+.item:first-child {
+    margin-top: 0px;
+}
 .card {
     display: flex;
 }

@@ -1,0 +1,121 @@
+.item {
+    margin-top: 24px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.1) 0%, rgba(115, 80, 215, 0.1) 68.23%, rgba(115, 80, 215, 0.1) 100%);
+    border-radius: 16px;
+    border: 1px solid #C0C3FF;
+    padding: 10px;
+    position: relative;
+}
+.item:first-child {
+    margin-top: 0px;
+}
+.card {
+    display: flex;
+}
+.left {
+    width: 150px;
+    min-width: 150px;
+}
+.left img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.action {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.readMore, .goTo, .fullReadMore {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #6788FF;
+    backdrop-filter: blur(144px);
+    border-radius: 10px;
+    width: 49%;
+    display: inline-block;
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+.fullReadMore {
+    width: 100%;
+}
+.goTo {
+    color:#67FFA4;
+    border: 1px solid #67FFA4;
+    cursor:pointer;
+}
+.right {
+    flex-grow: 1;
+    overflow: hidden;
+    padding-left: 15px;
+}
+.itemTtl {
+    display: flex;
+    align-items: center;
+}
+.itemTtl a{
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.toggle {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: url('/img/arrow.png');
+    border: none;
+    cursor: pointer;
+}
+.rotate_180 {
+    transform: rotate(180deg);    
+}
+.popUpBtn {
+    width: 100%;
+    padding: 10px;
+    background: rgba(210, 228, 255, 0.12);
+    border: 1px solid #67FFA4;
+    backdrop-filter: blur(144px);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: e-Ukraine-medium;
+    color: #67FFA4;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.close {
+    width: 30px;
+    height: 30px;
+    background: url('/img/close.png');
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    transform: translateZ(2px);
+    cursor: pointer;
+}
+.data {
+    margin-top: 10px;
+    font-family: e-Ukraine-light;
+    color: white;
+    font-size: 12px;
+}
+.shortDesc {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: e-Ukraine-light;
+    color: white;
+    font-size: 12px;
+}

@@ -1,0 +1,43 @@
+.section {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.card {
+    display: flex;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.1) 0%, rgba(115, 80, 215, 0.1) 68.23%, rgba(115, 80, 215, 0.1) 100%);
+    border-radius: 16px;
+}
+.cardLeft {
+    min-width: 200px;
+}
+.cardLeft img {
+    border-radius: 10px;
+}
+.cardRight {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
+.card_row {
+    display: flex;
+}
+.btn {
+    width: 278px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #67FFA4;
+    backdrop-filter: blur(144px);
+    border-radius: 10px;
+    font-family: e-Ukraine-medium;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #67FFA4;
+    cursor: pointer;
+}
+
+
+

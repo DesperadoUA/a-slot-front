@@ -20,11 +20,18 @@ export default function IndexCasino({status, data}) {
   )
 }
 IndexCasino.getInitialProps = async ({req, res}) => {
-  const DAL = new Builder()
+ /* const DAL = new Builder()
   const response = await DAL.setPostType('pages')
                             .setUrlId('casino')
                             .setAction('get')
                             .get()
+                            */
+  const response = {
+    status: 'error',
+    data: {
+      body: {}
+    }
+  }
   response.status = 'error'
   if(res) res.statusCode = response.status !== 'ok' ? 404 : 200
   return response

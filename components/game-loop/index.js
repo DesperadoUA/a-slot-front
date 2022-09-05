@@ -6,7 +6,6 @@ export default function GameLoop() {
     return (
         <section className={css.section}>
             <div className='container'>
-                <h2 className={css.ttl}>{TRANSLATE.GAMES[config.LANG]}</h2>
                 <div className={css.wrapper}>
                    <GameCard />
                    <GameCard />

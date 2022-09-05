@@ -1,6 +1,8 @@
 import { MainLayout } from '../../layouts/Main'
 import Content from '../../components/content'
+import H1 from '../../components/h1'
 import Faq from '../../components/faq'
+import NewsLoop from '../../components/news-loop'
 import Builder from '../../DAL'
 
 export default function IndexArticle({status, data}) {
@@ -9,6 +11,8 @@ export default function IndexArticle({status, data}) {
        {
             status === 'ok' ? 
             <>
+            <H1 h1={data.body.h1} />
+            <NewsLoop posts={data.body.news}/>
             <Content text={data.body.content} />
             <Faq posts={data.body.faq} />
             </>

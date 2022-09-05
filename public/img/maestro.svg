@@ -5,6 +5,7 @@
 <path d="M0 0H64V40H0V0Z" fill="url(#paint0_linear_1589_21127)"/>
 </mask>
 <g mask="url(#mask0_1589_21127)">
+<rect width="64" height="40" fill="#D2E4FF"/>
 <rect x="14.2857" y="9.14282" width="35.4286" height="21.4286" fill="url(#pattern0)"/>
 </g>
 </g>

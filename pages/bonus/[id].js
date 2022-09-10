@@ -1,5 +1,6 @@
 import { MainLayout } from '../../layouts/Main'
 import Content from '../../components/content'
+import BonusCharacters from '../../components/bonus-characters'
 import H1 from '../../components/h1'
 import Builder from '../../DAL'
 
@@ -10,6 +11,7 @@ export default function SingleBonus({status, data}) {
             status === 'ok' ? 
             <>
             <H1 h1={data.body.h1} />
+            <BonusCharacters data={data.body.characters} />
             <Content text={data.body.content} />
             </>
           :null

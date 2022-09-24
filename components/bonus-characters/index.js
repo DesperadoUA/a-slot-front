@@ -10,10 +10,10 @@ export default function BonusCharacters({data}) {
                     {
                         data.map((item, index) => {
                         return  <div className={css.row} key={index}>
-                                    <div className={css.left}>{item.value}</div>
+                                    <div className={css.left}>{item.value_1}</div>
                                     <div className={css.right}>
                                         {
-                                            item.child.map((itemChild, indexChild) => <span className={css.charactersItem} key={indexChild}>{itemChild.value}</span>)
+                                            item.value_2.map((itemChild, indexChild) => <span className={css.charactersItem} key={indexChild}>{itemChild}</span>)
                                         }
                                     </div>
                                 </div>

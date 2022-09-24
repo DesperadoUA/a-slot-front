@@ -1,5 +1,5 @@
 const config = {
-    NODE_ENV: 'production',
+    NODE_ENV: 'dev',
     LANG: 'ru',
     API_PATH: {
         dev: 'http://127.0.0.1:8000/api',

@@ -31,7 +31,9 @@ ul {
 * {
   box-sizing: border-box;
 }
-
+.active_tab {
+  background: rgba(210, 228, 255, 0.16)!important;
+}
 .container {
   width: 875px;
   max-width: 90%;

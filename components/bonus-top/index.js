@@ -1,16 +1,8 @@
-import { useState } from 'react'
 import css from './style.module.css'
-import RatingItem from '../bonus-loop/card/ratingItem'
-import BonusCharacters from '../bonus-characters'
 import config from '../../config'
 import TRANSLATE from '../../helpers/translate'
 import Helper from '../../helpers'
 export default function BonusTop({data}) {
-    const [bonusCharacters, setBonusCharactersState] = useState(data.characters.length ? data.characters[0].child : [])
-    const changeBonusCharactersState = (index) => {
-        const bonusSystemItems = data.characters.length ? data.characters[index].child : []
-        setBonusCharactersState(bonusSystemItems)
-    }
     const refAction = (item) => Helper.refActivate(item)
     return (
         <>
@@ -28,22 +20,6 @@ export default function BonusTop({data}) {
                                     <div className={css.bonusValue}>
                                         {data.value}
                                     </div>
-                                    <RatingItem rating={data.rating} label={TRANSLATE['CONVENIENCE'][config.LANG]} />
-                                </div>
-                                <div className={css.bonusSystem}>
-                                    {
-                                        data.characters.length 
-                                        ? data.characters.map((itemBonus, indexBonus) => {
-                                            return <div className={css.bonusSystemItem} 
-                                                    key={indexBonus} 
-                                                    onClick={() => {changeBonusCharactersState(indexBonus)}
-                                        }
-                                            >
-                                                {itemBonus.value}
-                                            </div>
-                                        })
-                                        : null
-                                    }
                                 </div>
                                 <div className={css.action}>
                                     <button className={css.goTo} onClick={()=>refAction(data)}>{TRANSLATE.GO_TO[config.LANG]}</button>
@@ -54,7 +30,6 @@ export default function BonusTop({data}) {
                 </div>
             </div>
         </section>
-        <BonusCharacters data={bonusCharacters}/>
         </>
     )
   }

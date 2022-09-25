@@ -1,6 +1,8 @@
 .section {
     padding-top: 30px;
     padding-bottom: 30px;
+    background: linear-gradient(0deg, #1F222C, #1F222C), rgba(20, 21, 23, 0.4);
+    margin-top: 25px;
 }
 .ttl {
     font-family: e-Ukraine-medium;

@@ -12,7 +12,7 @@ export default function IndexGame({status, data}) {
             status === 'ok' ? 
             <>
             <H1 h1={data.body.h1} />
-            <GameLoop />
+            <GameLoop posts={data.body.games} />
             <Content text={data.body.content} />
             <Faq posts={data.body.faq} />
             </>

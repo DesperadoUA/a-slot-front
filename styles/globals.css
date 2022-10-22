@@ -215,3 +215,8 @@ article .warning {
   stroke: #A3A3AC;
 }
 /* Rating */
+/* margins */
+body .mt-0 {
+  margin-top: 0px;
+}
+/* margins */

@@ -1,0 +1,45 @@
+.section {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.card {
+    display: flex;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(175, 193, 255, 0.1) 0%, rgba(115, 80, 215, 0.1) 68.23%, rgba(115, 80, 215, 0.1) 100%);
+    border-radius: 16px;
+}
+.card .cardTtl {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+.cardLeft {
+    min-width: 230px;
+}
+.cardLeft img {
+    border-radius: 10px;
+}
+.cardRight {
+    flex-grow: 1;
+}
+.card_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.license {
+    margin: 0px 6px;
+    transform: translateY(10px);
+}
+.licenseWrapper {
+    padding-left: 15px;
+    display: flex;
+}
+.subTtl {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+

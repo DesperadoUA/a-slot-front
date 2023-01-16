@@ -1,0 +1,13 @@
+.section {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background: linear-gradient(0deg, #1F222C, #1F222C), #212532;
+}
+.section h2 {
+    color: white;
+}
+.row {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}

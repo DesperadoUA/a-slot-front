@@ -1,6 +1,4 @@
 import css from './style.module.css'
-import config from '../../../config'
-import TRANSLATE from '../../../helpers/translate'
 import Adapters from './adapters'
 export default function Characters({data, adapter = 'default', title = ''}) {
     const currentData = Adapters[adapter](data)
@@ -8,11 +6,7 @@ export default function Characters({data, adapter = 'default', title = ''}) {
         currentData.length 
         ?   <section className={css.section}>
                 <div className='container'>
-                    {
-                        title 
-                        ? <h2>{TRANSLATE.VENDOR_CHARACTERISTICS[config.LANG]}</h2>
-                        : null 
-                    }
+                    { title ? <h2>{title}</h2> : null }
                     {
                         currentData.map((item, index) => {
                         return  <div className={css.row} key={index}>

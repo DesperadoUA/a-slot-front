@@ -1,9 +1,7 @@
 import css from './style.module.css'
-import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import MobileContent from './mobileView'
 export default function Content({text}) {
-    const [content, setContent] = useState(text)
     const commonState = useSelector(state => {
         const { commonReducer } = state
         return commonReducer
@@ -24,7 +22,6 @@ export default function Content({text}) {
         {
             text.length ? 
                 <section className={css.section}>
-                <article>
                     {
                         commonState.device !== '' 
                         ? commonState.device === 'mobile'
@@ -36,7 +33,6 @@ export default function Content({text}) {
                               </article> 
                         : null
                     }
-                </article>
                </section>
            : null
         }

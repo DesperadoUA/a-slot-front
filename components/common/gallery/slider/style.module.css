@@ -1,0 +1,76 @@
+.container {
+    width: 880px;
+}
+.sliderWrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+}
+.sliderBox {
+    width: 880px;
+    position: relative;
+}
+.sliderContainer {
+    width: 880px;
+    overflow: hidden;
+}
+.leftBtn {
+    width: 120px;
+    height: 32px;
+    position: absolute;
+    left: -90px;
+    top: 45%;
+    cursor: pointer;
+    background: url('/img/arrow.png') center center no-repeat rgba(210, 228, 255, 0.06);
+    border:none;
+    transform: rotate(90deg);
+    border-radius: 8px;
+}
+.rightBtn {
+    width: 120px;
+    height: 32px;
+    position: absolute;
+    right: -90px;
+    top: 45%;
+    cursor: pointer;
+    background: url('/img/arrow.png') center center no-repeat rgba(210, 228, 255, 0.06);
+    border: none;
+    transform: rotate(-90deg);
+    border-radius: 8px;
+}
+.sliderItem {
+    width: 880px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-basis: 880px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.sliderItem img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.slider {
+    display: flex;
+    transition: 0.7s;
+}
+.thumbnailWrapper {
+    display: flex;
+    justify-content: center;
+}
+.imgWrapper {
+    width: 210px;
+    height: 232px;    
+} 
+.thumbnail {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

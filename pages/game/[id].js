@@ -1,6 +1,12 @@
 import { MainLayout } from '../../layouts/Main'
 import Content from '../../components/content'
 import H1 from '../../components/h1'
+import Characters from '../../components/common/characters'
+import GameTop from '../../components/game-top'
+import GameSymbol from '../../components/game-symbol'
+import Gallery from '../../components/common/gallery'
+import TRANSLATE from '../../helpers/translate.json'
+import config from '../../config'
 import Builder from '../../DAL'
 export default function SingleGame({status, data}) {
   return (
@@ -9,7 +15,11 @@ export default function SingleGame({status, data}) {
         status === 'ok' ? 
         <>
           <H1 h1={data.body.h1} />
+          <GameTop data={data.body} />
+          <Characters data={data.body.characteristics} adapter="commaSeparation" title={TRANSLATE.GAME_CHARACTERISTICS[config.LANG]} />
           <Content text={data.body.content} />
+          <GameSymbol data={data.body.symbols} title={TRANSLATE.SYMBOL_GAME[config.LANG]} />
+          <Gallery data={data.body.gallery} title={TRANSLATE.SCREENSHOTS[config.LANG]} />
         </>
       :null
       }
